@@ -1,9 +1,25 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import NavBar from './NavBar'
 
 const viewDonor = () => {
+    const [data, changeData] = useState([])
+
+    const fetchData = () => {
+        axios.get("https://host-demo-app.onrender.com/api/donors").then(
+            (response) => {
+                changeData(response.data)
+            }
+        ).catch()
+    }
+    useEffect(
+        () => {
+            fetchData()
+        }, []
+    )
     return (
         <div>
-
+            <navBar />
             <table class="table">
                 <thead>
                     <tr>
@@ -15,9 +31,6 @@ const viewDonor = () => {
                         <th scope="col">E-mail</th>
                         <th scope="col">City</th>
                         <th scope="col">Weight</th>
-                        <th scope="col">Last Donation</th>
-                        <th scope="col">Created At</th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -30,11 +43,10 @@ const viewDonor = () => {
                                     <td>{value.gender}</td>
                                     <td>{value.blood_group}</td>
                                     <td>{value.phone}</td>
-                                    <td>{value.mail}</td>
+                                    <td>{value.email}</td>
                                     <td>{value.city}</td>
-                                    <td>{value.weight}</td>
-                                    <td>{value.last_donated}</td>
-                                    <td>{value.created_at}</td>
+                                    <td>{value.weight_kg}</td>
+
 
                                 </tr>
                             )
