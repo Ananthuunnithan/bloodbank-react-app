@@ -1,10 +1,10 @@
 import React from 'react'
 
 const addDonor = () => {
-    return (
-        <div>
+  return (
+    <div>
 
-            <div className="container mt-4 mb-4">
+<div className="container mt-4 mb-4">
                 <div className="row">
                     <div className="col col-12">
 
@@ -84,8 +84,8 @@ const addDonor = () => {
                 </div>
             </div>
 
-        </div>
-    )
+    </div>
+  )
 }
 
 export default addDonor
