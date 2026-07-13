@@ -19,7 +19,7 @@ const viewDonor = () => {
     )
     return (
         <div>
-            <navBar />
+            <NavBar />
             <table class="table">
                 <thead>
                     <tr>

@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from './NavBar'
 
-const addDonor = () => {
+const AddDonor = () => {
     const [input,changeInput]= useState(
         { 
             donor_name: "",  
-            age:"" ,  
+            age: "" ,  
             gender: "",  
             blood_group: "",  
             phone: "",  
@@ -29,7 +29,7 @@ const addDonor = () => {
     }
   return (
     <div>
-<navBar/>
+<NavBar/>
 <div className="container mt-4 mb-4">
                 <div className="row">
                     <div className="col col-12">
@@ -50,17 +50,17 @@ const addDonor = () => {
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Gender</label>
-                                <select name="" id="" className="form-select" name="gender" value={input.gender}>
-                                    <option value="">Male</option>
-                                    <option value="">Female</option>
-                                    <option value="">Others</option>
+                                <select name="" id="" className="form-select" name="gender" value={input.gender} onChange={inputHandler}>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
                                 </select>
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Blood Group</label>
-                                <input type="text" className="form-control" name="blood_group" value={input.blood_group} />
+                                <input type="text" className="form-control" name="blood_group" value={input.blood_group} onChange={inputHandler}/>
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
@@ -109,4 +109,4 @@ const addDonor = () => {
   )
 }
 
-export default addDonor
+export default AddDonor
