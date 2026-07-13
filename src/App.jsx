@@ -3,14 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import AddDonor from './components/AddDonor'
+import addDonor from './components/addDonor'
+import viewDonor from './components/viewDonor'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <AddDonor/>
+    <addDonor/>
+    <viewDonor/>
     </>
   )
 }
