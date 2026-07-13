@@ -3,9 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import addDonor from './components/addDonor'
-import viewDonor from './components/viewDonor'
-import navBar from './components/navBar'
+import AddDonor from './components/AddDonor'
+import ViewDonor from './components/ViewDonor'
+import NavBar from './components/NavBar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
@@ -16,8 +16,8 @@ function App() {
     <>
 <BrowserRouter>
 <Routes>
-  <Route path='/' element={<addDonor/>}/>
-  <Route path='/view' element={<viewDonor/>}/>
+  <Route path='/' element={<AddDonor/>}/>
+  <Route path='/view' element={<ViewDonor/>}/>
 </Routes>
 </BrowserRouter>
     </>
