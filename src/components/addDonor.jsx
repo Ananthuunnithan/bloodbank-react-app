@@ -4,15 +4,15 @@ import NavBar from './NavBar'
 const addDonor = () => {
     const [input,changeInput]= useState(
         { 
-            "donor_name": "",  
-            "age":"" ,  
-            "gender": "",  
-            "blood_group": "",  
-            "phone": "",  
-            "email": "",  
-            "city": "",  
-            "weight_kg": "",  
-            "last_donation_date": ""
+            donor_name: "",  
+            age:"" ,  
+            gender: "",  
+            blood_group: "",  
+            phone: "",  
+            email: "",  
+            city: "",  
+            weight_kg: "",  
+            last_donation_date: ""
         }
     )
     const inputHandler=(event)=>{
@@ -20,7 +20,7 @@ const addDonor = () => {
     }
     const readValue=()=>{
         console.log(input)
-        axios.post("https://host-demo-app.onrender.com/api/add-course",input).then(
+        axios.post("https://host-demo-app.onrender.com/api/add-donor",input).then(
             (response)=>{
                 console.log(response.data)
                 alert("Course added successfully")
